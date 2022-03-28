@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "trello-clone-angular:build:production",
+            "firebaseProject": "troll-clone",
+            "firebaseHostingSite": "troll-clone"
+          }
         }
       }
     }

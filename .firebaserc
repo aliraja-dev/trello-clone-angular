@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "troll-clone": {
+      "hosting": {
+        "trello-clone-angular": [
+          "troll-clone"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "troll-clone"
+  }
+}
