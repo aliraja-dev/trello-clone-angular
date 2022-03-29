@@ -1,0 +1,14 @@
+<main>
+  <div class="home" *ngIf="!(afAuth.authState | async)">
+
+    <h1>Trello Boards</h1>
+    <h3>made with love using Angular & Firebase</h3>
+    <p>To use the app, you must sign up using the Google account</p>
+    <img src="/assets/google-logo.svg" alt="google sign in">
+    <button mat-raised-button color="primary">Google Sign In</button>
+  </div>
+  <div class="logout" *ngIf="afAuth.authState|async as user">
+    <p>You're currently signed in as <strong>{{user.displayName}}</strong></p>
+    <button class="logout" mat-stroked-button (click)="afAuth.signOut()">Sign out</button>
+  </div>
+</main>
