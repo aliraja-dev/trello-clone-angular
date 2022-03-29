@@ -10,13 +10,10 @@
         <mat-icon>home</mat-icon>
         <span>Home</span>
       </a>
-      <a mat-list-item routerLink="/boards" routerLinkActive="active" (click)="sidebar.close()">
-        <mat-icon>info</mat-icon>
-        <span>Boards</span>
-      </a>
-      <a mat-list-item routerLink="/contact" routerLinkActive="active" (click)="sidebar.close()">
-        <mat-icon>login</mat-icon>
-        <span>Sign in</span>
+      <a mat-list-item routerLink="/login" routerLinkActive="active" *ngIf="(afAuth.authState | async)"
+        (click)="afAuth.signOut()" (click)="sidebar.close()">
+        <mat-icon>logout</mat-icon>
+        <span>Sign out</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>
@@ -33,9 +30,7 @@
           Boards
         </a>
         <a mat-button routerLink="/login" routerLinkActive="active">
-          Sign in
-        </a>
-        <a routerLink=""><img src="assets/default-user.svg" alt="" class="avatar"></a>
+          Sign out </a>
 
       </div>
       <!-- More Icon for dropdown that always will be shown  -->

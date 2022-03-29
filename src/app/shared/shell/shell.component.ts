@@ -1,5 +1,6 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Observable, shareReplay, map } from 'rxjs';
 
 
@@ -15,7 +16,7 @@ export class ShellComponent implements OnInit {
   isHandset$: Observable<boolean> = this.breakpointObserver.observe('(max-width: 600px)').pipe(map(result => result.matches), shareReplay());
 
 
-  constructor(private breakpointObserver: BreakpointObserver,) { }
+  constructor(private breakpointObserver: BreakpointObserver, public afAuth: AngularFireAuth) { }
 
   ngOnInit(): void {
   }
