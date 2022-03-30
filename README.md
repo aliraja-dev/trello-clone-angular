@@ -12,4 +12,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 # Project Overview
 
-This project will be a trello clone app using the fireship.io Angular course as an inspiration.
+This project will be a trello clone app using the fireship.io Angular course as an inspiration. However, i will be adding two branches to this repo, and one will be with a Firebase service singleton for persistent data storage and other branch will incorporate the state management using NGXS state, actions and selectors for the user boards, user auth state and individual tasks inside a board as well.
