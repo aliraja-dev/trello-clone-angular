@@ -34,3 +34,8 @@ This project also applies the angular CDK for drag and drag.
 ## Delete Reusable component with confirmation logic
 
 ![homepage](images/delete_board_two_stage_delete.png)
+
+## Firestore Security Rules
+
+Only auth user can read his own boards & only auth users can create new boards and their userId is placed on every board they create
+![homepage](images/firestore_security_rules_trello_app.png)
