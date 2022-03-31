@@ -12,4 +12,25 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 # Project Overview
 
-This project will be a trello clone app using the fireship.io Angular course as an inspiration. However, i will be adding two branches to this repo, and one will be with a Firebase service singleton for persistent data storage and other branch will incorporate the state management using NGXS state, actions and selectors for the user boards, user auth state and individual tasks inside a board as well.
+This project will be a trello clone app using the fireship.io Angular course as a starting inspiration. However, i will be adding two branches to this repo, and one will be with a Firebase service singleton for persistent data storage and other branch will incorporate the state management using NGXS state, actions and selectors for the user boards, user auth state and individual tasks inside a board as well.
+This project also applies the angular CDK for drag and drag.
+
+## Draggable Individual boards
+
+![homepage](images/Trello_clone_app_aliraja-dev.png)
+
+## Add New Board
+
+![homepage](images/add_new_board.png)
+
+## Add new Task
+
+![homepage](images/add_new_task.png)
+
+## Update Task
+
+![homepage](images/Update_task.png)
+
+## Delete Reusable component with confirmation logic
+
+![homepage](images/delete_board_two_stage_delete.png)
