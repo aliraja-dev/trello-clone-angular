@@ -1,1 +1,10 @@
-<p>boards-list works!</p>
+<div cdkDropList cdkDropListOrientation="horizontal" class="boards-container" (cdkDropListDropped)="drop($event)">
+  <app-board cdkDrag *ngFor="let board of boards" [board]="board">
+    <!-- Project the drag handle into the board component template -->
+    <mat-icon class="handle">drag_indicator</mat-icon>
+  </app-board>
+
+  <div class="board-button">
+    <button mat-raised-button color="accent" cdkDragDisabled click="openNewBoardDialog()">Create Board</button>
+  </div>
+</div>

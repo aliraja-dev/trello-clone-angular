@@ -12,9 +12,9 @@ export interface Board {
  */
 
 export interface Task {
-  description?: string;
-  label?: 'purple' | 'green' | 'yellow' | 'red' | 'blue' | 'orange';
-  createdAt?: Date | string;
+  description: string;
+  label: 'purple' | 'green' | 'yellow' | 'red' | 'blue' | 'orange';
+  createdAt: Date | string;
 }
 
 
