@@ -1,10 +1,12 @@
+import { Timestamp } from "firebase/firestore";
+
 export interface Board {
   tasks: Task[];
   title: string;
   userId?: string;
   uid?: string;
   priority?: number;
-  createdAt?: Date | string;
+  createdAt?: Timestamp;
 }
 
 /**

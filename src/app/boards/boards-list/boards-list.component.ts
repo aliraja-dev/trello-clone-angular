@@ -7,7 +7,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { BoardDialogComponent } from 'src/app/dialogs/board-dialog.component';
 
 
-
 @Component({
   selector: 'app-boards-list',
   templateUrl: './boards-list.component.html',
@@ -26,6 +25,8 @@ export class BoardsListComponent implements OnInit, OnDestroy {
   }
 
   drop(event: CdkDragDrop<string[]>) {
+    console.log("drop", this.boards, event.previousIndex, event.currentIndex);
+
     moveItemInArray(this.boards, event.previousIndex, event.currentIndex);
     this.bs.sortBoards(this.boards);
   }

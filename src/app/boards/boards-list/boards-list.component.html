@@ -1,6 +1,5 @@
 <div cdkDropList cdkDropListOrientation="horizontal" class="boards-container" (cdkDropListDropped)="drop($event)">
   <app-board cdkDrag *ngFor="let board of boards" [board]="board">
-    <!-- Project the drag handle into the board component template -->
     <mat-icon cdkDragHandle class="handle">drag_indicator</mat-icon>
   </app-board>
 

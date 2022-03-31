@@ -15,7 +15,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { ShellComponent } from './shell/shell.component';
-const components = [ShellComponent];
+import { DeleteButtonComponent } from './delete-button/delete-button.component';
+import { TimestampToDatePipe } from './timestamp-to-date.pipe';
+
+const components = [ShellComponent, DeleteButtonComponent, TimestampToDatePipe];
 const modules = [
   CommonModule,
   MatButtonModule,
