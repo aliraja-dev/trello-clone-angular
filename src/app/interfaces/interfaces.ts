@@ -1,10 +1,10 @@
 export interface Board {
-  uid: string;
-  userId?: string;
+  tasks: Task[];
   title: string;
+  userId?: string;
+  uid?: string;
   priority?: number;
   createdAt?: Date | string;
-  tasks?: Task[];
 }
 
 /**

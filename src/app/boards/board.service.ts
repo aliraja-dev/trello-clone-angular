@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { AngularFireAuth } from "@angular/fire/compat/auth";
 import { AngularFirestore } from "@angular/fire/compat/firestore";
-
 import { arrayRemove } from 'firebase/firestore';
 import { switchMap } from "rxjs";
 import { Board } from "../interfaces/interfaces";
@@ -60,8 +59,8 @@ export class BoardService {
    * Update tasks array on a board.
   */
 
-  updatesTasksOnABoard(boardId: string, tasks: Task[]) {
-    return this.afs.collection('boards').doc(boardId).update({ tasks: tasks });
+  updatesTasksOnABoard(boardId: string, tasks: any) {
+    return this.afs.collection('boards').doc(boardId).update({ tasks });
   }
 
   /**
@@ -71,5 +70,16 @@ export class BoardService {
     return this.afs.collection('boards').doc(boardId).update({
       tasks: arrayRemove({ uid: taskId })
     });
+  }
+
+  /**
+  * Run a batch write to change the priority of each board for sorting
+  */
+  sortBoards(boards: Board[]) {
+    const batch = this.afs.firestore.batch();
+    boards.forEach(b => {
+      batch.update(this.afs.firestore.collection('boards').doc(b.uid), b)
+    });
+    return batch.commit();
   }
 }

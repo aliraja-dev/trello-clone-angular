@@ -13,10 +13,14 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
+import { FormsModule } from '@angular/forms';
+import { TaskDialogComponent } from './dialogs/task-dialog.component';
+import { BoardDialogComponent } from './dialogs/board-dialog.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
