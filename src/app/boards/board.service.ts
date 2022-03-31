@@ -24,7 +24,6 @@ export class BoardService {
           ).valueChanges({ idField: 'uid' });
         }
         else {
-
           return [];
         }
       }

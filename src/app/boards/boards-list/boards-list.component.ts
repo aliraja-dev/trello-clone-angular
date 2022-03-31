@@ -30,7 +30,8 @@ export class BoardsListComponent implements OnInit, OnDestroy {
     this.bs.sortBoards(this.boards);
   }
 
-  openBoardDialog(): void {
+  openNewBoardDialog(): void {
+    console.log("open dialog for new board ");
     const dialogRef = this.dialog.open(BoardDialogComponent, {
       width: '400px',
       data: {}
