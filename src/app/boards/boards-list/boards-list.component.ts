@@ -9,13 +9,13 @@ import { BoardService } from '../board.service';
   styleUrls: ['./boards-list.component.scss']
 })
 export class BoardsListComponent implements OnInit, OnDestroy {
-  sub: Subscription;
-  boards$: Observable<Board[]>;
+  sub!: Subscription;
+  boards: Board[] = [];;
   constructor(private bs: BoardService) { }
 
   ngOnInit(): void {
     this.sub = this.bs.getUserBoards().subscribe(boards => {
-      this.boards$ = boards;
+      this.boards = boards;
     });
   }
 
